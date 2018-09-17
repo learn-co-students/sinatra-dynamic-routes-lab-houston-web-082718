@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Info Page</title>
+</head>
+<body>
+<h1>Operation</h1>
+
+<% if params[:operation] == "add" %>
+<% @sum = params[:num1].to_i + params[:num2].to_i %>
+<h2> <%= "#{@sum}" %></h2>
+
+<% elsif params[:operation] == "subtract" %><% @prod = params[:num1].to_i - params[:num2].to_i %>
+  <h2> <%= "#{@prod}" %></h2>
+
+  <% elsif params[:operation] == "divide" %><% @prod = params[:num1].to_f / params[:num2].to_f %>
+  <h2> <%= "#{@prod.round(2)}" %></h2>
+
+  <% elsif params[:operation] == "multiply" %><% @prod = params[:num1].to_i * params[:num2].to_i %>
+  <h2> <%= "#{@prod}" %></h2>
+  <%end %>
+
+
+</body>
+</html>

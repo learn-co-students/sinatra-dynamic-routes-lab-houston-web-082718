@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Info Page</title>
+</head>
+<body>
+<h1>Combine words</h1>
+<% @comb_words = params[:word1] +"\s" + params[:word2]+"\s" + params[:word3] +"\s"+ params[:word4]+"\s"+ params[:word5]+"." %>
+  <h2> <%= "#{@comb_words}"%></h2>
+</body>
+</html>

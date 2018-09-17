@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Math is cool!</h1>
+        
+        <% if params[:operation] == "add" %>
+        <% @add = params[:num1].to_i + params[:num2].to_i %>
+        <p><%= "#{@add}" %></p>
+
+        <% elsif params[:operation] == "subtract" %>
+        <% @subtract = params[:num1].to_i - params[:num2].to_i %>
+        <%= "#{@subtract}" %>
+
+        <% elsif params[:operation] == "multiply" %>
+        <% @multiply = params[:num1].to_i * params[:num2].to_i %>
+        <%= "#{@multiply}" %>
+
+        <% elsif params[:operation] == "divide" %>
+        <% @divide = params[:num1].to_f / params[:num2].to_f %>
+        <%= "#{@divide.round(3)}" %>
+
+        <% end %>
+        <!-- <p><%= %></p> -->
+    </body>
+</html>

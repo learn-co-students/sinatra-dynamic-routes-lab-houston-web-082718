@@ -20,26 +20,26 @@ describe App do
     end
   end
 
-  describe 'GET /square/:number' do
-    it 'sends a 200 status code' do
-      get '/square/4'
+  # describe 'GET /square/:number' do
+  #   it 'sends a 200 status code' do
+  #     get '/square/4'
 
-      expect(last_response.status).to eq(200)
-    end
+  #     expect(last_response.status).to eq(200)
+  #   end
 
-    it 'renders the square of the number' do
-      get '/square/26'
+  #   it 'renders the square of the number' do
+  #     get '/square/26'
 
-      expect(last_response.body).to include('676')
-    end
+  #     expect(last_response.body).to include('676')
+  #   end
 
-    it "isn't hard-coded" do
-      get '/square/25'
+  #   it "isn't hard-coded" do
+  #     get '/square/25'
 
-      expect(last_response.body).to include('625')
-      expect(last_response.body).to_not include('676')
-    end
-  end
+  #     expect(last_response.body).to include('625')
+  #     expect(last_response.body).to_not include('676')
+  #   end
+  # end
 
   describe 'GET /say/:number/:phrase' do
     it 'sends a 200 status code' do
